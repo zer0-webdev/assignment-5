@@ -23,17 +23,155 @@
         <div class="flex items-center">
             <div class="bg-blue-100 flex items-center px-2 py-2 rounded-3xl">
                 <img src="assets/checkbox.png" alt="checkbox" class="mr-2 w-4">
-                <span class="text-xl font-bold">23</span>
+                <span id="completed-tasks" class="text-xl font-bold">23</span>
             </div>
             <div class="ml-4">
-                <button>
+                <button id="theme-changer">
                 <img src="assets/theme-btn.png" alt="theme color">
                  </button>
             </div>
         </div>
     </header>
-    <!-- Main Content -->
-    
+     <!-- Main Content -->
+     <main class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4">
+        <!-- Left Column -->
+        <section class="col-span-3 space-y-4 bg-white p-4 rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-[#F4F7FF] p-4 rounded-lg col-span-1">
+                    <div class="flex items-center">
+                        <div class="bg-white text-white p-2 rounded-full">
+                            <img src="assets/checkbox.png" class="h-4" alt="">
+                        </div>
+                        <div class="ml-4">
+                            <p class="bg-white p-2 rounded-lg">Task Assigned</p>
+                            <p id="task-assigned" class="text-2xl font-bold">6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-t from-blue-500 to-blue-400 p-4 rounded-lg text-white flex justify-center items-center col-span-2">
+                    <a href="blog.html" class="flex items-center">
+                        <div>
+                            <img alt="Calendar icon" height="50" src="assets/board.png" width="50"/>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl">Discover Something New Today!</h2>
+                        </div>
+                     </a>
+                </div>
+                <div class="bg-[#F4F7FF] p-4 rounded-lg col-span-1 flex items-center">
+                    <div>
+                        <img alt="Calendar icon" class="w-6 mr-3" src="assets/calender.png" />
+                    </div>
+                    <div class="bg-white text-gray-700 p-2 rounded-lg">
+                        <p id="date-box" class="text-xs"></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-dashed border-gray-300 my-4"/>
+            <!-- Task Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Shop Ease</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Fix Mobile Button Issue</h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">21 March 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Fix Mobile Button Issue">Completed</button>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Soft Pay</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Add Pay Success Modal</h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">25 March 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Add Pay Success Modal">Completed</button>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Meta</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Add new reaction <span class="text-yellow-500">👏</span></h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">31 March 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Add new reaction">Completed</button>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Programming Hero</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Fix Video Loading Issue</h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">21 March 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Fix Video Loading Issue">Completed</button>
+                    </div>
+                </article>
+                <!-- Card 5 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Google LLC</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Integrate AI search</h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">01 April 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Integrate AI search">Completed</button>
+                    </div>
+                </article>
+                <!-- Card 6 -->
+                <article class="bg-[#F4F7FF] p-4 rounded-lg shadow-md">
+                    <div class="mb-2">
+                        <span class="bg-white text-gray-700 px-2 py-1 rounded-full text-sm">Polygon Tech</span>
+                    </div>
+                    <h3 class="text-lg font-bold">Review Ami Probashi Site</h3>
+                    <p class="text-gray-500 mt-2">A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-500">Deadline</p>
+                            <p class="text-xs text-gray-700 font-normal">5 May 2025</p>
+                        </div>
+                        <button class="task-button bg-[#422AD6] text-white px-4 py-2 rounded-lg" data-task="Review Ami Probashi Site">Completed</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Right Sidebar -->
+        <aside class="col-span-1">
+            <div class="bg-white p-4 rounded-lg h-full flex flex-col items-center">
+                <h2 class="text-lg font-bold mb-4">Activity Log</h2>
+                <button id="clear-history" class="bg-[#422AD6] text-white px-4 py-2 rounded-lg mb-4">Clear History</button>
+                <hr class="border-dashed border-gray-300 w-full"/>
+                <div id="activity-log" class="w-full mt-4"></div>
+            </div>
+        </aside>
+    </main>
 </div>
 </body>
 </html>
